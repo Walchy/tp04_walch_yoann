@@ -1,0 +1,82 @@
+<body>
+<h1>Inscription client</h1>
+<div class="blockcenter">
+  <form ngNativeValidate name="monFormulaire" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom"
+             required pattern="[a-zA-Z]*" appControlPascalCase [data]="client.nom"
+             [(ngModel)] = "client.nom">
+    </div>
+    <div>
+      <label for="prenom">Prenom:</label>
+      <input type="text" id="prenom" name="prenom"
+             required pattern="[a-zA-Z]*" appControlPascalCase [data]="client.prenom"
+             [(ngModel)] = "client.prenom">
+    </div>
+
+    <div>
+      <label for="adresse">Adresse:</label>
+      <input type="text" id="adresse" name="adresse" required
+             [(ngModel)] = "client.adresse">
+    </div>
+
+    <div>
+      <label for="cp">Code postal:</label>
+      <input type="text" id="cp" name="cp"
+             required pattern="[0-9]{5}"
+             [(ngModel)] = "client.cp">
+    </div>
+
+    <div>
+      <label for="ville">Ville:</label>
+      <input type="text" id="ville" name="ville"
+             required pattern="[a-zA-Z]*"
+             [(ngModel)] = "client.ville">
+    </div>
+
+    <div>
+      <label for="telephone">Telephone:</label>
+      <input type="text" id="telephone" name="telephone"
+             required pattern="[0-9 ]{14}"
+             [ngModel] = "client.tel | formatPhoneNumber" (ngModelChange)="client.tel=$event">
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" size="30"
+             required [(ngModel)] = "client.email">
+    </div>
+
+    <div>
+      <label>Civilité:</label>
+      <input type="radio" id="rbmonsieur" name="civilite" value="Monsieur"
+             [(ngModel)] = "client.civilite"> Monsieur
+      <input type="radio" id="rbmadame" name="civilite" value="Madame"
+             [(ngModel)] = "client.civilite"> Madame
+    </div>
+    <div>
+      <label for="pays">Pays:</label>
+      <input type="text" id="pays" name="pays"
+             required pattern="[a-zA-Z]*" appControlPascalCase [data]="client.nom"
+             [(ngModel)] = "client.pays">
+    </div>
+    <div>
+      <label for="password">Password (minimum 4 caractères):</label>
+      <input type="password" id="password" name="password"
+             required min="4" [(ngModel)] = "client.password">
+    </div>
+    <label for="password-confirmation">Confirmation password (minimum 4 caractères):</label>
+    <input type="password" id="password-confirmation" name="password-confirmation"
+           required min="4" [(ngModel)] = "client.passwordConfirmation">
+    <p *ngIf="showPasswordConfirmationMessageInvalid" style="color:#FF0000">Veuillez taper le même mot de passe dans les 2 champs.</p>
+
+    <div>
+      <label for="login">Login (minimum 4 caractères):</label>
+      <input type="text" id="login" name="login" required minlength="4" size="10"
+             [(ngModel)] = "client.login">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+</div>
+</body>
