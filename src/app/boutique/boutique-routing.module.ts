@@ -7,7 +7,7 @@ import {DetailComponent} from './detail/detail.component';
 const routes: Routes = [
   {path: '', component: CatalogueComponent},
   {path: 'panier', component: PanierComponent},
-  {path: 'detail', component: DetailComponent},
+  {path: 'detail/:id', component: DetailComponent},
   // {path: 'detail/:nom', component: DetailComponent},
   //{path: 'catalogue', import('./modules/catalogue/catalogue.module'). then(m => m.CatalogueModule) },
 ];

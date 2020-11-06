@@ -1,21 +1,26 @@
 [
   {
+    "id": 1,
     "nom": "poudre de perlinpinpin",
     "poids": 50
   },
   {
+    "id": 2,
     "nom": "poudre de perlinpinpdeux",
     "poids": 75
   },
   {
+    "id": 3,
     "nom": "poudre de perlinpinptrois",
     "poids": 130
   },
   {
+    "id": 4,
     "nom": "poudre de granit",
     "poids": 500
   },
   {
+    "id": 5,
     "nom": "poudre de noisette",
     "poids": 250
   }

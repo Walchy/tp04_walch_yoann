@@ -52,6 +52,6 @@ export class CatalogueComponent implements OnInit {
 
   // voir détail produit
   onClickProduit(produit: Produit): void {
-    this.router.navigate(['/detail'], {queryParams: produit})
+    this.router.navigate(['/boutique/detail', produit.id],{queryParams: produit})
   }
 }

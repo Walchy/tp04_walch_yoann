@@ -1,7 +1,7 @@
 <app-rechercher-des-produits (OnChangeFilter)="OnChangeFilter($event)"></app-rechercher-des-produits>
 <p *ngFor="let produit of listeDeProduitsFiltres | async">
 <!--  fonctionnait sans séparation en module-->
-  <a [routerLink] = "['detail', produit.nom]" (click)="onClickProduit(produit)"> {{ produit.nom }}</a> - {{ produit.poids }}g
+  <a [routerLink] = "['/boutique/detail', produit.id]" (click)="onClickProduit(produit)"> {{ produit.nom }}</a> - {{ produit.poids }}g
   <button class="btn btn-outline-success" (click)="onAjoutAuPanier(produit)">Ajouter au panier</button>
   <br>
 </p>

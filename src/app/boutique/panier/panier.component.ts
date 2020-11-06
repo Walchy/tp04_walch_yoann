@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Produit} from '../../../../shared/models/Produit';
-import {AjouterProduit, SupprimerProduit} from '../../../../shared/actions/produit-actions';
+import {SupprimerProduit} from '../../../../shared/actions/produit-actions';
 import {Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';

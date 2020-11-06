@@ -20,9 +20,9 @@
 
   </div>
 
-    <span class="text-white ">Nombre produit(s) : {{nbProduits$ | async}} </span>
+    <span class="text-white text-align: right;">Nombre produit(s) : {{nbProduits$ | async}} </span>
     <!-- Panier-->
-    <button type="button" class="btn btn-outline-light" [routerLink]="['/boutique/panier']">
+    <button type="button" class="btn btn-outline-light float: right"; [routerLink]="['/boutique/panier']">
       Panier
       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor"
            xmlns="http://www.w3.org/2000/svg">
